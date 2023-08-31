@@ -1,0 +1,21 @@
+{
+    "name": "nazar/petwork1",
+    "autoload": {
+        "psr-4": {
+            "PostgreSQLTutorial\\": "petwork1/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Nazar",
+            "email": "n.vasin@lantan.info"
+        }
+    ],
+    "require": {
+        "ext-simplexml": "*",
+        "ext-pdo_pgsql": "*",
+        "ext-pgsql": "*",
+        "ext-pdo": "*",
+        "ext-php-pgsql": "*"
+    }
+}

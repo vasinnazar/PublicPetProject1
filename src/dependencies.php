@@ -1,0 +1,9 @@
+<?php
+include_once('app/Controllers/CurrencyController.php');
+include_once('app/Actions/GetCurrenciesAction.php');
+include_once('app/Actions/CreateDBTable.php');
+include_once('app/Actions/GetXmlAction.php');
+include_once('app/Helpers/CurlRequests.php');
+include_once('app/Mapper.php');
+include_once('app/Helpers/XmlParser.php');
+include_once('app/Currency.php');

@@ -1,0 +1,25 @@
+version: '3.7'
+services:
+  db:
+    container_name: db
+    image: postgres:9.6.11-alpine
+    environment:
+      POSTGRES_DB: test_postgres
+      POSTGRES_USER: test_user
+      POSTGRES_PASSWORD: test_secret
+    volumes:
+      -  "./docker/volume/psql:/var/lib/postgresql"
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - "./src:/var/www/html"
+      - "./docker/nginx/conf.d:/etc/nginx/conf.d"
+
+  php:
+    build:
+      context: ./docker/php/
+    volumes:
+      - "./src:/var/www/html"
